@@ -483,8 +483,9 @@ public class PieChartView extends View {
     }
 
     /**
-     * 默认的0度是3点钟方向，如果需要旋转图形请在此设置旋转的角度
-     * @param rotateAngle 旋转的角度(0-360)
+     * 设置旋转的角度
+     * 0度是3点钟方向，默认的-90，如果需要旋转图形请在此设置旋转的角度
+     * @param rotateAngle 旋转的角度
      */
     public void setRotateAngle(float rotateAngle) {
         mRotateAngle = rotateAngle;
