@@ -3,6 +3,13 @@
 
 奇怪的控件仓库
 
+- 引入方式
+
+```groovy
+//1.0.0可替换为最新版本
+implementation 'com.github.Lo-Heng:widgets:1.0.0'
+```
+
 ## widgets
 
 ### pieChartView
@@ -13,28 +20,35 @@
 目前支持以下api:
 
 #### 设置旋转角度
-> 0度是3点钟方向，默认的-90，如果需要旋转图形请在此设置旋转的角度
-> 输入参数：float rotateAngle
+
+- **rotateAngle** 角度
+- 0度是3点钟方向，默认的-90，如果需要旋转图形请在此设置旋转的角度
 ```java
-/**
-* 设置旋转的角度
-* 0度是3点钟方向，默认的-90，如果需要旋转图形请在此设置旋转的角度
-* @param float rotateAngle 旋转的角度
-*/
 pieChartView.setRotateAngle(rotateAngle)
-
-
-/**
-* 是否显示图例
-* @param showLegend
-*/
-public void setShowLegend(boolean showLegend)
 ```
 
-初始化数据方式（目前仅支持动态添加数据，后续会有更新）：
-
-> void updateData(List<Float> rateList, int[] colorList, List<String> nameList)
-> public void updateData(List<Float> rateList, List<int[]> colorList, List<String> nameList)
+#### 是否显示图例
+- **showLegend：** 是否显示图例
 ```java
-pieCharView.updateData()
+pieChartView.setShowLegend(showLegend)
+```
+
+#### 初始化数据方式（两种）：1种是纯色 ，2是渐变色
+
+```java
+/**
+* 更新数据 1
+* @param rateList  色块占比
+* @param colorList 色块颜色
+* @param nameList  色块名称
+*/
+void updateData(List<Float> rateList, int[] colorList, List<String> nameList)
+
+/**
+* 更新数据 2
+* @param rateList  色块占比
+* @param gradientColors 色块颜色(渐变)
+* @param nameList  色块名称
+*/
+public void updateData(List<Float> rateList, List<int[]> gradientColors, List<String> nameList)
 ```
