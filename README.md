@@ -3,6 +3,8 @@
 
 奇怪的控件仓库
 
+ 看不到图片的参考[这个方法](https://blog.csdn.net/qq_38232598/article/details/91346392)
+
 - 引入方式
 
 ```groovy
